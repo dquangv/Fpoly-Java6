@@ -1,0 +1,56 @@
+[
+	{
+		"name": "Vũ Đăng Quang",
+		"gender": true,
+		"marks": 9.5,
+		"contact": {
+			"email": "quangvd@fpt.edu.vn",
+			"phone": "0123456789",
+			"address": "TPHCM"
+		},
+		"subjects": [
+			"SOF306",
+			"PDP201"
+		]
+	},
+	{
+		"name": "Vũ Hoàng Long",
+		"gender": true,
+		"marks": 8.5,
+		"contact": {
+			"email": "longvh@fpt.edu.vn",
+			"phone": "0971123451",
+			"address": "TPHCM"
+		},
+		"subjects": [
+			"SOF306",
+			"PDP201",
+			"COM108"
+		]
+	},
+	{
+		"name": "Nguyễn Thụy Ngọc Giàu",
+		"gender": false,
+		"marks": 10.0,
+		"contact": {
+			"email": "giauntnps26628@fpt.edu.vn",
+			"phone": "0971123453"
+		},
+		"subjects": [
+			"SOF306"
+		]
+	},
+	{
+		"name": "Đỗ Gia Huy",
+		"gender": true,
+		"marks": 9.0,
+		"contact": {
+			"email": "huydgps26598@fpt.edu.vn",
+			"phone": "0971123457"
+		},
+		"subjects": [
+			"SOF306",
+			"PDP201"
+		]
+	}
+]

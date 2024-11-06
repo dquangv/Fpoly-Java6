@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var sv = {
+			"name" : "Vũ Đăng Quang",
+			"gender" : true,
+			"marks" : 9.5,
+			"contact" : {
+				"email": "quangvd@fpt.edu.vn",
+				"phone": "0123456789",
+				"address": "TP.HCM"
+			},
+			"subjects" : [ "SOF306", "PDP201" ]
+		}
+
+		//Xuat doi tuong
+		console.log(sv)
+		//Truy xuat thuoc tinh
+		sv.name = sv['name'].toUpperCase()
+		console.log(sv.name, sv.contact.email, sv.subjects[0])
+
+		//Duyet doi tuong theo key
+		for ( var key in sv) {
+			console.log(key, sv[key])
+		}
+
+		//Chuyen doi doi tuong JSON sang chuoi
+		var text = JSON.stringify(sv)
+		console.log(text)
+
+		//Chuyen doi chuoi sang doi tuong JSON
+		var obj = JSON.parse(text)
+		console.log(obj)
+	</script>
+</body>
+</html>

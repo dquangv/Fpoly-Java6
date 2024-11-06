@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Nguyen Van A",
+        "gender": "Nam",
+        "position": "Giam doc",
+        "salary": 3000.0,
+        "contact": {
+            "email": "nguyenvana@example.com",
+            "phone": "0981234567"
+        },
+        "department": "Tai chinh",
+        "startDate": "2022-03-15",
+        "skills": ["Excel", "Phan tich tai chinh", "Lap bao cao tai chinh"]
+    },
+    {
+        "name": "Nguyen Van B",
+        "gender": "Nam",
+        "position": "Nhan vien",
+        "salary": 4000.0,
+        "contact": {
+            "email": "nguyenvanb@example.com",
+            "phone": "0981234568"
+        },
+        "department": "Tai chinh",
+        "startDate": "2022-03-15",
+        "skills": ["Excel", "Phan tich tai chinh", "Lap bao cao tai chinh"]
+    },
+    {
+        "name": "Nguyen Van C",
+        "gender": "Nam",
+        "position": "Nhan vien",
+        "salary": 1000.0,
+        "contact": {
+            "email": "nguyenvanc@example.com",
+            "phone": "0981234569"
+        },
+        "department": "Tai chinh",
+        "startDate": "2022-03-15",
+        "skills": ["Excel", "Phan tich tai chinh", "Lap bao cao tai chinh"]
+    },
+    {
+        "name": "Nguyen Van D",
+        "gender": "Nam",
+        "position": "Nhan vien",
+        "salary": 2000.0,
+        "contact": {
+            "email": "nguyenvand@example.com",
+            "phone": "0981234570"
+        },
+        "department": "Tai chinh",
+        "startDate": "2022-03-15",
+        "skills": ["Excel", "Phan tich tai chinh", "Lap bao cao tai chinh"]
+    },
+    {
+        "name": "Nguyen Van E",
+        "gender": "Nam",
+        "position": "Nhan vien",
+        "salary": 5000.0,
+        "contact": {
+            "email": "nguyenvane@example.com",
+            "phone": "0981234571"
+        },
+        "department": "Tai chinh",
+        "startDate": "2022-03-15",
+        "skills": ["Excel", "Phan tich tai chinh", "Lap bao cao tai chinh"]
+    }
+]

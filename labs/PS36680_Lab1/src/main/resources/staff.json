@@ -1,0 +1,13 @@
+{
+  "name": "Trần Thị Minh",
+  "gender": "Nữ",
+  "position": "Nhân viên Kế toán",
+  "salary": 12000000,
+  "contact": {
+    "email": "minhtran@example.com",
+    "phone": "0981234567"
+  },
+  "department": "Tài chính",
+  "startDate": "2022-03-15",
+  "skills": ["Excel", "Phân tích tài chính", "Lập báo cáo tài chính"]
+}

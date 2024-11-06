@@ -1,0 +1,14 @@
+{
+	"name": "Vũ Đăng Quang",
+	"gender": true,
+	"marks": 9.5,
+	"contact": {
+		"email": "quangvd@fpt.edu.vn",
+		"phone": "0123456789",
+		"address": "TP.HCM"
+	},
+	"subjects": [
+		"SOF306",
+		"PDP201"
+	]
+}
