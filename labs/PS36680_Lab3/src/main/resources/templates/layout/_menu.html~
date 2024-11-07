@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<nav th:fragment="navbar">
+		<a th:href="@{/home/index}" th:text="#{nav.home}">Trang chủ</a> |
+		<a th:href="@{/home/about}" th:text="#{nav.about}">Giới thiệu</a> |
+		<a th:href="@{/student/form}" th:text="#{nav.student}">Sinh viên</a> |
+		<a th:href="@{/validation/form}" th:text="#{nav.validate}">Validate</a>
+		[<a href="?lang=vi">Tiếng Việt</a>]
+		[<a href="?lang=en">English</a>]
+	</nav>
+</body>
+</html>

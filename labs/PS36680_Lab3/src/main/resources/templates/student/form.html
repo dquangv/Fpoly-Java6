@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{/layout/layout :: dynamic(~{::body})}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	i{
+		color: red;
+	}
+</style>
+</head>
+<body>
+	<h3>Liên kết và xác thực dữ liệu</h3>
+	<div th:text="${message}"></div>
+	<form action="/student/save" method="post" th:object="${sv}" style="width: 300px;">
+		<input th:field="*{email}" placeholder="Email?">
+		<i th:errors="*{email}"></i><br>
+		<input th:field="*{fullname}" placeholder="Họ và tên?">
+		<i th:errors="*{fullname}"></i><br>
+		<input th:field="*{marks}" placeholder="Điểm trung bình?">
+		<i th:errors="*{marks}"></i><br>
+		<input th:field="*{gender}" th:value="true" type="radio">Nam
+		<input th:field="*{gender}" th:value="false" type="radio">Nữ
+		<i th:errors="*{gender}"></i><br>
+		<select th:field="*{country}">
+			<option value="VN">Việt Nam</option>
+			<option value="US">United States</option>
+		</select>
+		<hr>
+		<button>Lưu</button>
+	</form>
+</body>
+</html>
