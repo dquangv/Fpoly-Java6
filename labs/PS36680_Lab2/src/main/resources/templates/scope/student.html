@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<hr>
+	<a th:href="@{|student?index=${n-1}|}">Prev</a> [- [[${n + 1}]]/[[${total}]] -]
+	<a th:href="@{|student?index=${n+1}|}">Next</a>
+	<hr>
+	<ul>
+		<li>Name: [[${sv.name}]]</li>
+		<li>Gender: [[${sv.gender?'Male':'Female'}]]</li>
+		<li>Email: [[${sv.email}]]</li>
+		<li>Mark: [[${sv.marks}]]</li>
+		<li>Result: [[${sv.marks>=5?'Passed':'Failed'}]]</li>
+	</ul>
+</body>
+</html>

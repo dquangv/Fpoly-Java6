@@ -1,0 +1,13 @@
+{
+	"name": "V Đăng Quang",
+	"gender": true,
+	"marks": 9.5,
+	"contact": {
+		"email": "quangvdps36680@fpt.edu.vn",
+		"phone": "01666331161"
+	},
+	"subjects": [
+		"SOF306",
+		"PDP201"
+	]
+}
