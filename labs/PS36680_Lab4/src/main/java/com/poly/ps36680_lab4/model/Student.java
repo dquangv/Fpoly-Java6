@@ -1,0 +1,26 @@
+package com.poly.ps36680_lab4.model;
+
+
+import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Student {
+	@NotBlank(message = "Không để trống email")
+	@Email(message = "Không đúng định dạng email")
+	String email;
+	@NotBlank(message = "Không để trống họ tên")
+	String fullname;
+	@NotNull(message = "Không để trống điểm")
+	@PositiveOrZero(message = "Điểm phải lớn hơn hoặc bằng 0")
+	@Max(value = 10, message = "Điểm phải nhỏ hơn hoặc bằng 10")
+	Double marks;
+	@NotNull(message = "Chọn giới tính")
+	Boolean gender;
+	@NotBlank(message = "Chọn quốc tịch")
+	String country;
+}

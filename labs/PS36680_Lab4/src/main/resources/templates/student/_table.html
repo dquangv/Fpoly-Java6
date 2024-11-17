@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table style="width: 100%;" border="1">
+        <tr>
+            <th>Email</th>
+            <th>Full name</th>
+            <th>Mark</th>
+            <th>Gender</th>
+            <th>Country</th>
+            <th></th>
+        </tr>
+        <tr th:each="item:${items}" th:object="${item.value}">
+            <td>[[*{email}]]</td>
+            <td>[[*{fullname}]]</td>
+            <td>[[*{marks}]]</td>
+            <td>[[*{gender} ? 'Male' : 'Female']]</td>
+            <td>[[*{country}]]</td>
+            <td>
+                <a th:href="@{|/student/edit/${item.key}|}">Edit</a> |
+                <a th:href="@{|/student/del/${item.key}|}">Del</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

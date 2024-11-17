@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="dynamic(view)">
+<head>
+<meta charset="UTF-8">
+<title>Tổ chức layout</title>
+</head>
+<body>
+	<header>
+		<img th:src="@{/images/VooTreeVeeVuuLogo.png}">
+	</header>
+	<hr>
+	<nav th:insert="~{/layout/_menu.html :: navbar}"></nav>
+	<hr>
+	<main th:replace="${view}"></main>
+	<hr>
+	<hr>
+	<hr>
+	<footer>FPT Polytechnic &copy; 2024. All right reserved</footer>
+</body>
+</html>
