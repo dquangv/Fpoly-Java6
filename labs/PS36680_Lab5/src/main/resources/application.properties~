@@ -1,0 +1,8 @@
+spring.application.name=Lab5_PS36680
+spring.datasource.url= jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=J6
+spring.datasource.username=r
+spring.datasource.password=Scavenger2497
+spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.SQLServerDialect
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto = update

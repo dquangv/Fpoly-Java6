@@ -1,0 +1,9 @@
+package com.poly.lab5_ps36680.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.jv6.lab5.entity.Account;
+
+public interface AccountDAO extends JpaRepository<Account, String>{
+
+}
