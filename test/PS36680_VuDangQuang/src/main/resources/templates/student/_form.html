@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Student Form</title>
+	<style type="text/css">
+		i {
+			color: red;
+			font-size: 0.9em;
+		}
+		.form-container {
+			max-width: 400px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #f8f9fa;
+			border: 1px solid #dee2e6;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+	</style>
+</head>
+<body>
+
+<div class="container mt-5">
+	<h3 class="text-center">Employee Form</h3>
+
+	<!-- Hiển thị thông báo -->
+	<div th:text="${message}" class="alert alert-info text-center" role="alert"></div>
+
+	<div class="form-container">
+		<form th:object="${student}" th:action="@{/student/create}" method="post">
+			<div class="form-group">
+				<label>Mã Nhân Viên</label>
+				<input th:field="*{maNV}" type="text" class="form-control" placeholder="Mã Nhân Viên">
+				<!-- Hiển thị lỗi -->
+				<i th:if="${#fields.hasErrors('maNV')}" th:errors="*{maNV}" class="form-text text-danger"></i>
+			</div>
+			<div class="form-group">
+				<label>Họ và Tên</label>
+				<input th:field="*{name}" type="text" class="form-control" placeholder="Họ và Tên">
+				<!-- Hiển thị lỗi -->
+				<i th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="form-text text-danger"></i>
+			</div>
+
+			<div class="form-group">
+				<label>Địa chỉ</label>
+				<input th:field="*{address}" type="text" class="form-control" placeholder="Địa chị">
+				<!-- Hiển thị lỗi -->
+				<i th:if="${#fields.hasErrors('address')}" th:errors="*{address}" class="form-text text-danger"></i>
+			</div>
+
+			<div class="form-group">
+				<label>Giới tính</label>
+				<select th:field="*{gender}" class="form-control">
+					<option value="">-- Chọn giới tính --</option>
+					<option value="true">Nam</option>
+					<option value="false">Nữ</option>
+				</select>
+				<!-- Hiển thị lỗi -->
+				<i th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}" class="form-text text-danger"></i>
+			</div>
+
+
+			<!-- Các nút hành động -->
+			<div class="d-flex justify-content-between">
+				<button th:formaction="@{/student/create}" class="btn btn-primary">Create</button>
+				<button th:formaction="@{|/student/update/${key}|}" th:if="${key != null}" class="btn btn-success">Update</button>
+				<button th:formaction="@{|/student/del/${key}|}" class="btn btn-danger">Delete</button>
+				<button th:formaction="@{/student/index}" class="btn btn-secondary">Reset</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!-- JavaScript Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+
+</body>
+</html>

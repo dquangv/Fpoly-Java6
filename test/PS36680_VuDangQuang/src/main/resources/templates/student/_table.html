@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Table</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .table-container {
+            margin: 20px auto;
+            max-width: 90%;
+        }
+    </style>
+</head>
+<body>
+<div class="table-container">
+    <h3 class="text-center">Student List</h3>
+
+    <!-- Bảng với Bootstrap -->
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th>MÃ NV</th>
+            <th>HỌ VÀ TÊN</th>
+            <th>GIỚI TÍNH</th>
+            <th>ĐĨA CHỈ</th>
+            <th>THAO TÁC</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item : ${items}" th:object="${item.value}">
+            <td>[[*{maNV}]]</td>
+            <td>[[*{name}]]</td>
+            <td>[[*{gender} ? 'Nam' : 'Nữ']]</td>
+            <td>[[*{address}]]</td>
+            <td>
+                <a th:href="@{|/student/edit/${item.key}|}" class="btn btn-sm btn-primary">Edit</a>
+                <a th:href="@{|/student/del/${item.key}|}" class="btn btn-sm btn-danger ml-1">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

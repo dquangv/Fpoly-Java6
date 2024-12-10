@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+</head>
+<body>
+<main>
+    
+    <h4 th:unless="${#authorization.expression('isAuthenticated()')}">
+            <i style="color: red">Chưa đăng nhập ní ơi</i>
+        </h4>
+    <div th:if="${#authorization.expression('isAuthenticated()')}">
+        <p>Welcome, <span th:text="${#authentication.principal.username}"></span></p>
+        <span th:text="${#authentication.principal.username}"></span>
+<!--        <span th:text="${#authentication.principal.role}"></span>-->
+        <ul>
+            <li th:each="authority : ${#authentication.principal.authorities}" th:text="${authority.authority}"></li>
+        </ul>
+
+    </div>
+</main>
+</body>
+</html>
